@@ -1,0 +1,6 @@
+dependencies:
+- name: prometheus
+  repository: https://charts.helm.sh/stable
+  version: 11.12.1
+digest: sha256:3e59819679379be155e2bd611f5f47573f8828d6dfa09554774946e319ace1ba
+generated: "2021-08-01T00:57:13.067413643+05:30"
