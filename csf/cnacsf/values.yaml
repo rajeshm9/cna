@@ -4,6 +4,7 @@
 
 
 prometheus:
+  enabled: true
   kubeStateMetrics: 
     enabled: false
   nodeExporter:
@@ -13,10 +14,34 @@ prometheus:
       scrape_interval: 15s
   pushgateway:
     enabled: false
+grafana:
+  enabled: true
+  testFramework:
+    enabled: false
+  ingress:
+    enabled: yes
+    path: /
+    hosts:
+      - grafana.cna.in
+  adminUser: admin
+  adminPassword: admin
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+        - name: Prometheus
+          type: prometheus
+          url: http://csf-prometheus-server
+          isDefault: true
+
+
+
 fluentd-elasticsearch:
+  enabled: false
   elasticsearch:
     host: "csf-elasticsearch-client"
 elasticsearch:
+  enabled: false
   client:
     replicas: 1
   master:
@@ -24,6 +49,7 @@ elasticsearch:
   data:
     replicas: 1
 kibana:
+  enabled: false
   env:
     ELASTICSEARCH_HOSTS: "http://csf-elasticsearch-client:9200"
   ingress:

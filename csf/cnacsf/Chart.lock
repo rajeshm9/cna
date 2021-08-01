@@ -2,6 +2,9 @@ dependencies:
 - name: prometheus
   repository: https://charts.helm.sh/stable
   version: 11.12.1
+- name: grafana
+  repository: https://charts.helm.sh/stable
+  version: 5.5.7
 - name: fluentd-elasticsearch
   repository: https://charts.helm.sh/stable
   version: 2.0.7
@@ -11,5 +14,5 @@ dependencies:
 - name: kibana
   repository: https://charts.helm.sh/stable
   version: 3.2.8
-digest: sha256:43b202f26929c01fafdc65ccfd78c5e7191c5d71861c790c53f2e8de155fb06e
-generated: "2021-08-01T16:59:26.3573112+05:30"
+digest: sha256:c8382943a90903aaf8557307e601cb1e7441a90cfcc8e13b747f0ff1f5839c5b
+generated: "2021-08-01T22:54:42.365291269+05:30"
